@@ -8,7 +8,7 @@ public class Main {
         int pilihan;
 
         barang1922[] arrayBarang = new barang1922[5];
-        transaksipembelian1922[] arrayTransaksi = new transaksipembelian1922[5];
+        transaksiPembelian1922[] arrayTransaksi = new transaksiPembelian1922[5];
 
         while (true) {
             System.out.println("================TOKO Manasuka================");
@@ -24,6 +24,7 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
+                    System.out.printf("%-15s %-15s %-15s %-15s %-15s\n" , "kode barang", "nama", "kategori", "stok", "harga");
                     arrayBarang[0] = new barang1922("Br001", "Leo Keripik", "Makanan", 10, 1000);
                     arrayBarang[1] = new barang1922("Br002", "You C1000 Botol", "Minuman", 10, 7000);
                     arrayBarang[2] = new barang1922("Br003", "Teh Pucuk Botol", "Minuman", 10, 4000);
@@ -34,7 +35,15 @@ public class Main {
                     }
                     break;
                 case 2:
-
+                    System.out.printf("%-15s %-15s  %-15s %-15s %-15d %-15d", "kode transaksi", "nama pembeli" , "tanggal pembelian" , "nama barang");
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR01", "santi", "21-04-2024", 1, arrayBarang[0] );
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR02", "vani", "21-04-2024", 1, arrayBarang[0] );
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR03", "siska", "23-04-2024", 1, arrayBarang[0] );
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR04", "meimei", "23-04-2024", 1, arrayBarang[0] );
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR05", "ihsan", "24-04-2024", 1, arrayBarang[0] );
+                    for (int i = 0; i < arrayTransaksi.length;i++) {
+                        arrayTransaksi[i].tampilDataTransaksi();
+                    }
                 case 3:
 
                 case 4:
