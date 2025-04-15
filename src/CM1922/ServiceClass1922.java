@@ -29,8 +29,16 @@ public class ServiceClass1922 {
         
     }
 
-    void shorting(){ 
-
-
+    void sorting(){ 
+        for (int i = 0; i < index - 1; i++) {
+            for (int j = 0; j < index - i - 1; j++) {
+                if (trs[j].kodeTransaksi22.compareTo(trs[j + 1].kodeTransaksi22) > 0) {
+                    transaksiPembelian1922 temp = trs[j];
+                    trs[j] = trs[j + 1];
+                    trs[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Data transaksi berhasil diurutkan berdasarkan Kode Transaksi");
     }
 }
