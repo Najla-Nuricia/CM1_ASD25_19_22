@@ -51,10 +51,12 @@ public class Main {
                     }
                     break;
                 case 3:
+                    service.setTransaksi(arrayTransaksi);
                     service.searching();
                     break;
                 case 4:
                     service.sorting();
+                    break;
                 case 5:
                     return;
                 
