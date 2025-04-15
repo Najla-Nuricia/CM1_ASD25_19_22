@@ -15,14 +15,8 @@ public class transaksipembelian1922 {
     }
 
     void tampilDataTransaksi() {
-        System.out.println("Kode Transaksi: " + kodeTransaksi22);
-        System.out.println("Nama Pembeli: " + namaPembeli22);
-        System.out.println("Tanggal Pembelian: " + tanggalPembelian22);
-        System.out.println("Jumlah Barang: " + qty22);
-        System.out.println("Kode Barang: " + brg22.kodeBarang1922);
-        System.out.println("Nama Barang: " + brg22.nama1922);
-        System.out.println("Kategori Barang: " + brg22.kategori1922);
-        System.out.println("Stok Barang: " + brg22.stok1922);
-        System.out.println("Harga Barang: " + brg22.harga1922);
+        System.out.printf("%-15s %-15s  %-15s %-15s %-15d %-15d", "kode transaksi", "nama pembeli" , "tanggal pembelian" , "nama barang");
+        System.out.printf("%-15s %-15s  %-15s %-15s %-15d %-15d", kodeTransaksi22, namaPembeli22, tanggalPembelian22, brg22.nama1922,qty22, brg22.harga1922);
+        
     }
 }
