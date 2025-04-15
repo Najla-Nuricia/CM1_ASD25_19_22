@@ -13,12 +13,18 @@ public class ServiceClass1922 {
     void searching(){
         System.out.print("masukkan kode transaksi yang dicari: ");
         String cari = sultanala.nextLine();
+        boolean ada=false;
         for (int i = 0; i < 5 ; i ++) {
             if (trs[i].kodeTransaksi22.equalsIgnoreCase(cari)) {
+                ada = true;
                 System.out.println("trasaksi ditemukan");
                 trs[i].tampilDataTransaksi();
-                
+                break;
             }
+        }
+
+        if (ada) {
+            System.out.println("tidak ada transaksi dengan kode " + cari);
         }
         
     }
