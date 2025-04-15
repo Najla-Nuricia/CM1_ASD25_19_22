@@ -9,6 +9,7 @@ public class Main {
 
         barang1922[] arrayBarang = new barang1922[5];
         transaksiPembelian1922[] arrayTransaksi = new transaksiPembelian1922[5];
+        ServiceClass1922 service = new ServiceClass1922();
 
         while (true) {
             System.out.println("================TOKO Manasuka================");
@@ -22,34 +23,40 @@ public class Main {
             pilihan = sultanala.nextInt();
             sultanala.nextLine();
 
-            switch (pilihan) {
-                case 1:
-                    System.out.printf("%-15s %-15s %-15s %-15s %-15s\n" , "kode barang", "nama", "kategori", "stok", "harga");
                     arrayBarang[0] = new barang1922("Br001", "Leo Keripik", "Makanan", 10, 1000);
                     arrayBarang[1] = new barang1922("Br002", "You C1000 Botol", "Minuman", 10, 7000);
                     arrayBarang[2] = new barang1922("Br003", "Teh Pucuk Botol", "Minuman", 10, 4000);
                     arrayBarang[3] = new barang1922("Br004", "Rinso Cair", "Sabun", 10, 7000);
                     arrayBarang[4] = new barang1922("Br005", "Mama Lemon Cair", "Sabun", 10, 1000);
+
+                    arrayTransaksi[0] = new transaksiPembelian1922("TR01", "santi", "21-04-2024", 1, arrayBarang[0] );
+                    arrayTransaksi[1] = new transaksiPembelian1922("TR02", "vani", "21-04-2024", 1, arrayBarang[1] );
+                    arrayTransaksi[2] = new transaksiPembelian1922("TR03", "siska", "23-04-2024", 1, arrayBarang[2] );
+                    arrayTransaksi[3] = new transaksiPembelian1922("TR04", "meimei", "23-04-2024", 1, arrayBarang[3] );
+                    arrayTransaksi[4] = new transaksiPembelian1922("TR05", "ihsan", "24-04-2024", 1, arrayBarang[4] );
+
+            switch (pilihan) {
+                case 1:
+                    System.out.printf("%-15s %-15s %-15s %-15s %-15s\n" , "kode barang", "nama", "kategori", "stok", "harga");
+                    
                     for (int i = 0; i < arrayBarang.length; i++) {
                         arrayBarang[i].tampilDataBarang();
                     }
                     break;
                 case 2:
+                    System.out.printf("%-15s %-15s  %-15s %-15s %-15s %-15s\n", "kode transaksi", "nama pembeli" , "tanggal pembelian" , "nama barang", "kuantitas", "harga");
                     
-                    arrayTransaksi[0] = new transaksiPembelian1922("TR01", "santi", "21-04-2024", 1, arrayBarang[0] );
-                    arrayTransaksi[0] = new transaksiPembelian1922("TR02", "vani", "21-04-2024", 1, arrayBarang[0] );
-                    arrayTransaksi[0] = new transaksiPembelian1922("TR03", "siska", "23-04-2024", 1, arrayBarang[0] );
-                    arrayTransaksi[0] = new transaksiPembelian1922("TR04", "meimei", "23-04-2024", 1, arrayBarang[0] );
-                    arrayTransaksi[0] = new transaksiPembelian1922("TR05", "ihsan", "24-04-2024", 1, arrayBarang[0] );
                     for (int i = 0; i < arrayTransaksi.length;i++) {
                         arrayTransaksi[i].tampilDataTransaksi();
                     }
-                case 3:
-
-                case 4:
-
-                case 5:
                     break;
+                case 3:
+                    service.searching();
+                    break;
+                case 4:
+                    service.sorting();
+                case 5:
+                    return;
                 
                 default:
                     System.out.println("Menu Tidak Tersedia");
