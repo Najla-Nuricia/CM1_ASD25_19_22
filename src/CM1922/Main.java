@@ -35,6 +35,9 @@ public class Main {
                     arrayTransaksi[3] = new transaksiPembelian1922("TR04", "meimei", "23-04-2024", 1, arrayBarang[3] );
                     arrayTransaksi[4] = new transaksiPembelian1922("TR05", "ihsan", "24-04-2024", 1, arrayBarang[4] );
 
+                    
+                    
+
             switch (pilihan) {
                 case 1:
                     System.out.printf("%-15s %-15s %-15s %-15s %-15s\n" , "kode barang", "nama", "kategori", "stok", "harga");
@@ -51,10 +54,17 @@ public class Main {
                     }
                     break;
                 case 3:
+                    service.tambahDataTransaksi22(arrayTransaksi[0]);
+                    service.tambahDataTransaksi22(arrayTransaksi[1]);
+                    service.tambahDataTransaksi22(arrayTransaksi[2]);
+                    service.tambahDataTransaksi22(arrayTransaksi[3]);
+                    service.tambahDataTransaksi22(arrayTransaksi[4]);
                     service.searching();
                     break;
                 case 4:
+                    service.setTransaksi(arrayTransaksi);
                     service.sorting();
+                    break;
                 case 5:
                     return;
                 

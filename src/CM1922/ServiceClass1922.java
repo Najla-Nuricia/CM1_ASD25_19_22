@@ -7,14 +7,20 @@ public class ServiceClass1922 {
     int index;
     
     void tambahDataTransaksi22(transaksiPembelian1922 trp){
-        System.out.println();
+        trs[index] = trp;
+        index++;
+     
+    }
+
+    void setTransaksi(transaksiPembelian1922[] data){
+        this.trs = data;
     }
 
     void searching(){
         System.out.print("masukkan kode transaksi yang dicari: ");
         String cari = sultanala.nextLine();
         boolean ada=false;
-        for (int i = 0; i < 5 ; i ++) {
+        for (int i = 0; i < trs.length ; i ++) {
             if (trs[i].kodeTransaksi22.equalsIgnoreCase(cari)) {
                 ada = true;
                 System.out.println("trasaksi ditemukan");
