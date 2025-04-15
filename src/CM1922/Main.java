@@ -54,11 +54,7 @@ public class Main {
                     }
                     break;
                 case 3:
-                    service.tambahDataTransaksi22(arrayTransaksi[0]);
-                    service.tambahDataTransaksi22(arrayTransaksi[1]);
-                    service.tambahDataTransaksi22(arrayTransaksi[2]);
-                    service.tambahDataTransaksi22(arrayTransaksi[3]);
-                    service.tambahDataTransaksi22(arrayTransaksi[4]);
+                    service.setTransaksi(arrayTransaksi);
                     service.searching();
                     break;
                 case 4:
