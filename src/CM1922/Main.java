@@ -35,7 +35,7 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.printf("%-15s %-15s  %-15s %-15s %-15d %-15d", "kode transaksi", "nama pembeli" , "tanggal pembelian" , "nama barang");
+                    
                     arrayTransaksi[0] = new transaksiPembelian1922("TR01", "santi", "21-04-2024", 1, arrayBarang[0] );
                     arrayTransaksi[0] = new transaksiPembelian1922("TR02", "vani", "21-04-2024", 1, arrayBarang[0] );
                     arrayTransaksi[0] = new transaksiPembelian1922("TR03", "siska", "23-04-2024", 1, arrayBarang[0] );
