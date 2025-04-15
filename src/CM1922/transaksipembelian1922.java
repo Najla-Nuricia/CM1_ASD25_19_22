@@ -19,6 +19,6 @@ public class transaksipembelian1922 {
         System.out.println("Nama Pembeli: " + namaPembeli);
         System.out.println("Tanggal Pembelian: " + tanggalPembelian);
         System.out.println("Jumlah Barang: " + qty);
-        barang1922.tampilDataBarang();
+        Barang.tampilDataBarang();
     }
 }

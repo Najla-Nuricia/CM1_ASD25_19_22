@@ -14,7 +14,7 @@ public class barang1922 {
         this.harga1922=harga1922;
     }
 
-    public void tampilDataBarang() {
+    void tampilDataBarang() {
         System.out.printf("%-10s %-10s %-10s %-10s\n" , "kode barang", "nama", "kategori", "stok", "harga");
         System.out.printf("%-10s %-10s %-10d %-10d\n" , kodeBarang1922, nama1922, kategori1922,stok1922,harga1922 );
     }
